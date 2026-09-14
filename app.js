@@ -542,8 +542,8 @@ function initContactForm() {
     const subject = subjectInput ? subjectInput.value.trim() : '';
     const msg = msgInput ? msgInput.value.trim() : '';
 
-    if (!name || !email || !msg) {
-      feedback.innerHTML = `<span style="color:#ef4444; font-weight:500;">Please fill in all mandatory fields.</span>`;
+    if (!name || !email) {
+      feedback.innerHTML = `<span style="color:#ef4444; font-weight:500;">Please provide your name and recruiter email address.</span>`;
       return;
     }
 
@@ -576,7 +576,7 @@ function initContactForm() {
           "Recruiter Email": email,
           "_replyto": email,
           "_subject": `[DevOps Recruiter Message] ${subject || 'Direct Inquiry from Portfolio'}`,
-          "Message": msg,
+          "Message": msg || "(No additional message provided)",
           "_captcha": "false"
         })
       });
