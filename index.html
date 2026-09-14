@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dolai Rajesh Kumar | DevOps Engineer & Cloud Specialist</title>
+  <meta name="description" content="Portfolio of Dolai Rajesh Kumar — DevOps Engineer specializing in AWS, Kubernetes, Terraform, CI/CD pipelines, and SRE Observability." />
+  <meta name="keywords" content="DevOps Engineer, Cloud Architect, AWS, Kubernetes, Terraform, Docker, Jenkins, Prometheus, Grafana, Hyderabad" />
+  <meta name="author" content="Dolai Rajesh Kumar" />
+  <meta property="og:title" content="Dolai Rajesh Kumar | DevOps Engineer Portfolio" />
+  <meta property="og:description" content="Results-driven DevOps Engineer with expertise in automated CI/CD, Kubernetes, and AWS infrastructure." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="terminal-prefix">&gt;_</span> rajesh.devops
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#metrics" class="nav-link">Impact</a>
+        <a href="#pipeline" class="nav-link">CI/CD Pipeline</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#terminal-section" class="nav-link terminal-badge">CLI Terminal</a>
+        <a href="#contact" class="nav-link contact-btn">Contact Me</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Available for DevOps & Cloud Roles</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Dolai Rajesh Kumar</span>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+          </p>
+          <p class="hero-bio">
+            DevOps Engineer with hands-on expertise building automated CI/CD pipelines, orchestrating scalable Kubernetes clusters, and architecting resilient AWS cloud infrastructure with Infrastructure as Code.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-item">
+              <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Hyderabad, India
+            </span>
+            <span class="meta-item">
+              <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              rajeshprabhakar2000@gmail.com
+            </span>
+            <span class="meta-item">
+              <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              +91 7287839925
+            </span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#terminal-section" class="btn btn-outline">
+              <span class="terminal-prompt">$</span> Try CLI Console
+            </a>
+            <a href="resume.md" download="Dolai_Rajesh_Kumar_Resume.md" class="btn btn-ghost" id="download-resume-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Resume
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://linkedin.com/in/dolairajeshkumar" target="_blank" rel="noopener noreferrer" class="social-badge" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/dolairajeshkumar" target="_blank" rel="noopener noreferrer" class="social-badge" title="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:rajeshprabhakar2000@gmail.com" class="social-badge" title="Email Rajesh">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>rajeshprabhakar2000@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Architecture Badge Preview -->
+        <div class="hero-visual">
+          <div class="tech-radar-card">
+            <div class="card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="header-title">system-architecture.yaml</span>
+            </div>
+            <pre class="yaml-code"><code><span class="token-key">infrastructure:</span>
+  <span class="token-key">cloud:</span> <span class="token-val">AWS (VPC, EKS, RDS, S3)</span>
+  <span class="token-key">provisioning:</span> <span class="token-val">Terraform Modules</span>
+  <span class="token-key">config_mgmt:</span> <span class="token-val">Ansible Playbooks</span>
+<span class="token-key">pipeline:</span>
+  <span class="token-key">orchestration:</span> <span class="token-val">Jenkins Declarative</span>
+  <span class="token-key">security_gates:</span> <span class="token-val">[SonarQube, Trivy]</span>
+  <span class="token-key">deployment:</span> <span class="token-val">Blue/Green Strategy</span>
+<span class="token-key">observability:</span>
+  <span class="token-key">metrics:</span> <span class="token-val">Prometheus + Grafana</span>
+  <span class="token-key">uptime_target:</span> <span class="token-val">99.9%</span>
+  <span class="token-key">mttr_reduction:</span> <span class="token-val">60%</span></code></pre>
+            <div class="card-footer-badge">
+              <span class="pulse-indicator"></span> Cluster Status: <strong>HEALTHY (All pods running)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact & Quantitative Metrics -->
+    <section class="metrics-section" id="metrics">
+      <div class="container">
+        <div class="section-badge">Proven Business Impact</div>
+        <h2 class="section-title">Engineered for Velocity & Reliability</h2>
+        
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number" data-target="70" data-suffix="%">0%</div>
+            <div class="metric-label">Release Time Accelerated</div>
+            <p class="metric-desc">Cut turnaround from 4 hours down to 12 minutes through automated Jenkins declarative CI/CD pipelines.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-number" data-target="99.9" data-decimals="1" data-suffix="%">0%</div>
+            <div class="metric-label">Workload Uptime Sustained</div>
+            <p class="metric-desc">Orchestrated high-availability EKS cluster with Horizontal Pod Autoscaling supporting 5,000+ daily users.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-number" data-target="5" data-prefix="< " data-suffix=" min">&lt; 0 min</div>
+            <div class="metric-label">Zero-Drift IaC Provisioning</div>
+            <p class="metric-desc">Standardized multi-environment infra with modular Terraform & Ansible, deploying 10-node clusters reliably.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-number" data-target="60" data-suffix="%">0%</div>
+            <div class="metric-label">MTTR Reduction</div>
+            <p class="metric-desc">Full-stack Prometheus & Grafana alerting with defined SLIs/SLOs to identify and resolve incidents rapidly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Interactive CI/CD Pipeline Section -->
+    <section class="pipeline-section" id="pipeline">
+      <div class="container">
+        <div class="section-badge">Pipeline Architecture</div>
+        <h2 class="section-title">Automated DevSecOps Delivery Flow</h2>
+        <p class="section-subtitle">
+          Interactive representation of the end-to-end continuous delivery pipeline engineered for zero downtime and automated security verification.
+        </p>
+
+        <div class="pipeline-wrapper">
+          <div class="pipeline-controls">
+            <button class="btn btn-sm btn-primary" id="trigger-pipeline-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Simulate Pipeline Run
+            </button>
+            <span class="pipeline-status-text" id="pipeline-status-text">Pipeline Idle — Ready for webhook trigger</span>
+          </div>
+
+          <div class="pipeline-diagram" id="pipeline-diagram">
+            <!-- Step 1 -->
+            <div class="pipeline-node" data-stage="1">
+              <div class="node-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+              </div>
+              <div class="node-content">
+                <span class="node-step">01. Source</span>
+                <h4>Git Pull Request</h4>
+                <p>Webhook triggers Jenkins multi-branch pipeline</p>
+              </div>
+              <div class="node-badge status-idle">Ready</div>
+            </div>
+
+            <div class="pipeline-connector"><span></span></div>
+
+            <!-- Step 2 -->
+            <div class="pipeline-node" data-stage="2">
+              <div class="node-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="node-content">
+                <span class="node-step">02. Build & Test</span>
+                <h4>Maven & Unit Tests</h4>
+                <p>Automated compilation & JUnit verification</p>
+              </div>
+              <div class="node-badge status-idle">Ready</div>
+            </div>
+
+            <div class="pipeline-connector"><span></span></div>
+
+            <!-- Step 3 -->
+            <div class="pipeline-node" data-stage="3">
+              <div class="node-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div class="node-content">
+                <span class="node-step">03. DevSecOps</span>
+                <h4>SonarQube & Trivy</h4>
+                <p>>80% coverage check & CVE vulnerability scan</p>
+              </div>
+              <div class="node-badge status-idle">Ready</div>
+            </div>
+
+            <div class="pipeline-connector"><span></span></div>
+
+            <!-- Step 4 -->
+            <div class="pipeline-node" data-stage="4">
+              <div class="node-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div class="node-content">
+                <span class="node-step">04. Containerize</span>
+                <h4>Docker & AWS ECR</h4>
+                <p>Multi-stage build & tagged image push</p>
+              </div>
+              <div class="node-badge status-idle">Ready</div>
+            </div>
+
+            <div class="pipeline-connector"><span></span></div>
+
+            <!-- Step 5 -->
+            <div class="pipeline-node" data-stage="5">
+              <div class="node-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div class="node-content">
+                <span class="node-step">05. Orchestrate</span>
+                <h4>Kubernetes / EKS</h4>
+                <p>Blue/Green rollout with healthchecks & rollback</p>
+              </div>
+              <div class="node-badge status-idle">Ready</div>
+            </div>
+
+            <div class="pipeline-connector"><span></span></div>
+
+            <!-- Step 6 -->
+            <div class="pipeline-node" data-stage="6">
+              <div class="node-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <div class="node-content">
+                <span class="node-step">06. SRE Guard</span>
+                <h4>Prometheus & Slack</h4>
+                <p>Telemetry, error budgeting, & instant alerts</p>
+              </div>
+              <div class="node-badge status-idle">Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-badge">Core Competencies</div>
+        <h2 class="section-title">DevOps & Cloud Tech Stack</h2>
+        <p class="section-subtitle">Categorized breakdown of tools, platforms, and frameworks leveraged across production deployments.</p>
+
+        <div class="skill-category-tabs">
+          <button class="skill-tab active" data-filter="all">All Skills</button>
+          <button class="skill-tab" data-filter="cloud">Cloud & Infra</button>
+          <button class="skill-tab" data-filter="containers">Containers & K8s</button>
+          <button class="skill-tab" data-filter="cicd">CI/CD & GitOps</button>
+          <button class="skill-tab" data-filter="iac">IaC & Config</button>
+          <button class="skill-tab" data-filter="sre">SRE & DevSecOps</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Cloud -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-header">
+              <span class="skill-tag">Cloud</span>
+              <h3>Amazon Web Services (AWS)</h3>
+            </div>
+            <p>Architecting secure, isolated infrastructure across public/private subnets and scalable cloud services.</p>
+            <div class="skill-chips">
+              <span>EC2</span><span>S3</span><span>EKS</span><span>RDS</span><span>VPC</span><span>IAM</span><span>Route 53</span><span>CloudWatch</span><span>Lambda</span>
+            </div>
+          </div>
+
+          <!-- Containers -->
+          <div class="skill-card" data-category="containers">
+            <div class="skill-header">
+              <span class="skill-tag">Containers</span>
+              <h3>Docker & Kubernetes (EKS)</h3>
+            </div>
+            <p>Containerizing microservices, orchestrating multi-node clusters, and managing auto-scaling pods.</p>
+            <div class="skill-chips">
+              <span>Docker</span><span>Kubernetes</span><span>EKS</span><span>Helm Charts</span><span>Multi-stage Builds</span><span>HPA</span><span>Ingress</span>
+            </div>
+          </div>
+
+          <!-- CI/CD -->
+          <div class="skill-card" data-category="cicd">
+            <div class="skill-header">
+              <span class="skill-tag">CI/CD</span>
+              <h3>Jenkins & GitHub Actions</h3>
+            </div>
+            <p>Declarative pipeline engineering, multi-branch automation, and GitOps deployments.</p>
+            <div class="skill-chips">
+              <span>Jenkins</span><span>GitHub Actions</span><span>Maven</span><span>ArgoCD</span><span>Webhooks</span><span>Gitflow</span>
+            </div>
+          </div>
+
+          <!-- IaC -->
+          <div class="skill-card" data-category="iac">
+            <div class="skill-header">
+              <span class="skill-tag">IaC</span>
+              <h3>Terraform & Ansible</h3>
+            </div>
+            <p>Infrastructure as Code with reusable modular architecture, remote state management, and configuration playbooks.</p>
+            <div class="skill-chips">
+              <span>Terraform</span><span>Ansible Playbooks</span><span>Roles & Vault</span><span>CloudFormation</span><span>State Locking</span>
+            </div>
+          </div>
+
+          <!-- SRE & Monitoring -->
+          <div class="skill-card" data-category="sre">
+            <div class="skill-header">
+              <span class="skill-tag">SRE & Observability</span>
+              <h3>Prometheus & Grafana</h3>
+            </div>
+            <p>Real-time metrics scraping, customized dashboards, SLA/SLO tracking, and proactive Alertmanager rules.</p>
+            <div class="skill-chips">
+              <span>Prometheus</span><span>Grafana</span><span>Alertmanager</span><span>CloudWatch Alarms</span><span>SNS Notifications</span><span>MTTR</span>
+            </div>
+          </div>
+
+          <!-- DevSecOps -->
+          <div class="skill-card" data-category="sre">
+            <div class="skill-header">
+              <span class="skill-tag">Security</span>
+              <h3>DevSecOps & Linux Scripting</h3>
+            </div>
+            <p>Shifting security left with automated static code analysis, vulnerability scanners, and robust Bash automation.</p>
+            <div class="skill-chips">
+              <span>SonarQube Gates</span><span>Trivy CVE Scan</span><span>IAM Least Privilege</span><span>Bash</span><span>Python</span><span>Nginx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Timeline -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-badge">Career History</div>
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Associate Software Engineer (DevOps & Cloud)</h3>
+                  <h4 class="company-title">CW Suite India Pvt Ltd — Hyderabad, India</h4>
+                </div>
+                <div class="timeline-date">
+                  <span class="pill-badge">June 2024 – Present</span>
+                </div>
+              </div>
+
+              <div class="timeline-tech-stack">
+                <strong>Environment:</strong> AWS (EC2, S3, IAM, CloudWatch), Jenkins, Docker, Kubernetes, Terraform, Ansible, Prometheus, Grafana, Git
+              </div>
+
+              <ul class="timeline-bullets">
+                <li>
+                  <strong>CI/CD & Release Automation:</strong> Designed and implemented declarative Jenkins CI/CD pipelines for 3 core microservices, cutting release turnaround time from <strong>4 hours to 12 minutes (70% faster)</strong> and enabling weekly automated production releases.
+                </li>
+                <li>
+                  <strong>Cluster Management & High Availability:</strong> Orchestrated containerized workloads using Docker and Kubernetes on AWS, configuring Horizontal Pod Autoscaling (HPA) and ingress controllers to achieve <strong>99.9% uptime</strong> supporting 5,000+ daily active users.
+                </li>
+                <li>
+                  <strong>Infrastructure as Code (IaC):</strong> Standardized infrastructure provisioning using modular <strong>Terraform</strong> and <strong>Ansible</strong>, deploying a 10-node development/staging environment in <strong>&lt;5 minutes</strong> while eliminating configuration drift across teams.
+                </li>
+                <li>
+                  <strong>SRE & Observability:</strong> Established full-stack monitoring using <strong>Prometheus and Grafana</strong> dashboards; defined SLIs/SLOs for latency and error rates and configured automated alerts, slashing <strong>MTTR by 60%</strong>.
+                </li>
+                <li>
+                  <strong>DevSecOps Integration:</strong> Integrated SonarQube static code analysis with strict quality gates (&gt;80% unit test coverage requirement) into build stages, preventing critical bugs and vulnerabilities from reaching staging and production.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Showcase -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-badge">Production Deployments</div>
+        <h2 class="section-title">Featured DevOps Projects</h2>
+        <p class="section-subtitle">Real-world systems demonstrating enterprise cloud architecture, CI/CD automation, and Infrastructure as Code.</p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-badge">Featured CI/CD Platform</span>
+              <div class="project-status">
+                <span class="status-dot green"></span> Live / Proven
+              </div>
+            </div>
+
+            <h3 class="project-title">End-to-End DevSecOps CI/CD Automation Platform</h3>
+            <p class="project-description">
+              Engineered an automated, webhook-driven CI/CD platform executing linting, compilation, unit testing, and static analysis on every pull request, culminating in safe blue/green production deployment.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="hl-icon">⚡</span>
+                <span>Automated PR webhooks with Jenkins Declarative Pipelines & GitHub Actions</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🛡️</span>
+                <span>Trivy container scanning & SonarQube quality gates before image registry push</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🚀</span>
+                <span>Zero-downtime blue/green deployment strategy with instant health-check rollback</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🔔</span>
+                <span>Slack & email webhooks providing real-time build statuses & coverage reports</span>
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span>Jenkins</span><span>GitHub Actions</span><span>Docker</span><span>SonarQube</span><span>Trivy</span><span>AWS EC2/S3</span><span>Maven</span><span>Slack</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-badge">Cloud Architecture & IaC</span>
+              <div class="project-status">
+                <span class="status-dot green"></span> Production-Ready
+              </div>
+            </div>
+
+            <h3 class="project-title">Cloud Infrastructure Provisioning & Resilient Microservices Deployment</h3>
+            <p class="project-description">
+              Provisioned secure, isolated AWS infrastructure from scratch using version-controlled Terraform modules, hosting containerized Java microservices behind an Nginx reverse proxy.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="hl-icon">🏗️</span>
+                <span>Modular Terraform code managing custom VPC, public/private subnets, NAT Gateways & Security Groups</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">📦</span>
+                <span>Multi-stage Docker builds minimizing image surface area for Spring Boot services</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">📊</span>
+                <span>Centralized AWS CloudWatch alarms & SNS topics triggering alerts on CPU, RAM, & Disk limits</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">📜</span>
+                <span>Bash automation scripts for log rotation, system health checks, and automated EBS snapshots</span>
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span>AWS VPC</span><span>EC2</span><span>S3</span><span>Terraform</span><span>Docker</span><span>Nginx</span><span>CloudWatch</span><span>Bash</span>
+            </div>
+          </div>
+
+          <!-- Project 3 (Bonus Showcasing Kubernetes & GitOps) -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-badge">Cloud-Native Kubernetes</span>
+              <div class="project-status">
+                <span class="status-dot green"></span> High Availability
+              </div>
+            </div>
+
+            <h3 class="project-title">Kubernetes Cluster Observability & GitOps Fleet Management</h3>
+            <p class="project-description">
+              Architected a production-grade Kubernetes (EKS) observability stack paired with GitOps principles, tracking SLIs/SLOs and automated pod autoscaling based on real-time traffic demand.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="hl-icon">☸️</span>
+                <span>Deployed Helm charts for Prometheus Operator, Grafana, and Alertmanager across namespaces</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">📈</span>
+                <span>Configured Horizontal Pod Autoscaler (HPA) to scale pods dynamically based on CPU & custom metrics</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🎯</span>
+                <span>Created custom Grafana executive dashboards showing p95/p99 request latency and error rates</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🔄</span>
+                <span>Declarative configuration syncing ensuring 100% parity between staging and production environments</span>
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span>Kubernetes / EKS</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>Alertmanager</span><span>ArgoCD</span><span>Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive DevOps Terminal Emulator -->
+    <section class="terminal-section" id="terminal-section">
+      <div class="container">
+        <div class="section-badge">Interactive Shell</div>
+        <h2 class="section-title">DevOps Command Center</h2>
+        <p class="section-subtitle">Interact with Rajesh's profile directly via this simulated Linux terminal. Type commands to inspect skills, run a pipeline test, or view system status.</p>
+
+        <div class="terminal-window">
+          <div class="terminal-titlebar">
+            <div class="terminal-dots">
+              <span class="term-dot close"></span>
+              <span class="term-dot min"></span>
+              <span class="term-dot max"></span>
+            </div>
+            <div class="terminal-tab-title">rajesh@devops-bastion: ~ (bash)</div>
+            <div class="terminal-actions">
+              <button class="term-btn" id="term-clear-btn" title="Clear terminal">clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output">
+              <div class="term-line banner">
+                ==========================================================<br>
+                Welcome to Dolai Rajesh Kumar's Interactive DevOps Console<br>
+                Host: aws-ap-south-1 | Role: DevOps & Cloud Specialist<br>
+                Type '<span class="term-highlight">help</span>' to list available commands.<br>
+                ==========================================================
+              </div>
+            </div>
+
+            <div class="terminal-input-row">
+              <span class="terminal-prompt-label">rajesh@devops:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help' or 'pipeline --run'..." />
+            </div>
+          </div>
+
+          <div class="terminal-quick-cmds">
+            <span>Quick Commands:</span>
+            <button class="quick-cmd-btn" data-cmd="help">help</button>
+            <button class="quick-cmd-btn" data-cmd="whoami">whoami</button>
+            <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+            <button class="quick-cmd-btn" data-cmd="pipeline --run">pipeline --run</button>
+            <button class="quick-cmd-btn" data-cmd="cat resume.txt">cat resume.txt</button>
+            <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-badge">Academic & Credentials</div>
+        <h2 class="section-title">Education & Certifications</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <span class="edu-degree">Master of Computer Applications (MCA)</span>
+              <h3 class="edu-institution">Aurora's PG College, Hyderabad</h3>
+              <span class="edu-meta">Graduated: 2023 • Computer Science & Applications</span>
+              <p class="edu-desc">Comprehensive foundation in computer systems, algorithms, database management, and distributed software engineering.</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon">📜</div>
+            <div class="edu-info">
+              <span class="edu-degree">Cloud & DevOps Certifications</span>
+              <h3 class="edu-institution">Industry Credentials</h3>
+              <div class="cert-list">
+                <div class="cert-item">
+                  <span class="cert-badge">AWS</span>
+                  <span>AWS Certified Solutions Architect – Associate</span>
+                </div>
+                <div class="cert-item">
+                  <span class="cert-badge">K8s</span>
+                  <span>Certified Kubernetes Administrator (CKA) / Fundamentals</span>
+                </div>
+                <div class="cert-item">
+                  <span class="cert-badge">IaC</span>
+                  <span>HashiCorp Terraform & Docker Containerization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Direct Call to Action -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-badge">Get in Touch</div>
+        <h2 class="section-title">Let's Build Resilient Cloud Systems Together</h2>
+        <p class="section-subtitle">
+          I am actively exploring DevOps, Cloud, SRE, and Platform Engineering opportunities. Whether you have a question or an opening, feel free to drop a message!
+        </p>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-details">
+                <h4>Direct Email</h4>
+                <p>rajeshprabhakar2000@gmail.com</p>
+                <button class="copy-btn" data-copy="rajeshprabhakar2000@gmail.com">Copy Email</button>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-details">
+                <h4>Phone / WhatsApp</h4>
+                <p>+91 7287839925</p>
+                <button class="copy-btn" data-copy="+917287839925">Copy Phone</button>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-details">
+                <h4>Location</h4>
+                <p>Hyderabad, India (Open to Hybrid & Remote)</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>LinkedIn Network</h4>
+                <p>linkedin.com/in/dolairajeshkumar</p>
+                <a href="https://linkedin.com/in/dolairajeshkumar" target="_blank" rel="noopener noreferrer" class="link-btn">Connect on LinkedIn &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+              <h3>Send a Direct Message</h3>
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" placeholder="e.g. Hiring Manager / Tech Lead" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Your Email</label>
+                <input type="email" id="contact-email" placeholder="name@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" placeholder="DevOps Engineer Role / Collaboration" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-msg">Message</label>
+                <textarea id="contact-msg" rows="4" placeholder="Hello Rajesh, we reviewed your portfolio and would like to discuss..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span>Send Message via Email</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <div class="form-feedback" id="form-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="terminal-prefix">&gt;_</span> Dolai Rajesh Kumar
+        <p>Architecting reliable, automated cloud platforms & DevSecOps workflows.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top</a>
+        <a href="https://linkedin.com/in/dolairajeshkumar" target="_blank">LinkedIn</a>
+        <a href="https://github.com/dolairajeshkumar" target="_blank">GitHub</a>
+        <a href="mailto:rajeshprabhakar2000@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Dolai Rajesh Kumar. Built with clean HTML5, CSS3 & JavaScript. Deployed on AWS S3 & CloudFront.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
