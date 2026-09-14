@@ -524,26 +524,74 @@ function initCopyButtons() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const feedback = document.getElementById('form-feedback');
+  const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
   if (!form || !feedback) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('contact-name').value;
-    const email = document.getElementById('contact-email').value;
-    const subject = document.getElementById('contact-subject').value;
-    const msg = document.getElementById('contact-msg').value;
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const subject = document.getElementById('contact-subject').value.trim();
+    const msg = document.getElementById('contact-msg').value.trim();
 
-    const mailtoUrl = `mailto:rajeshprabhakar2000@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`)}`;
+    if (!name || !email || !msg) {
+      feedback.innerHTML = `<span style="color:#ef4444;">Please fill in all required fields.</span>`;
+      return;
+    }
 
-    window.location.href = mailtoUrl;
+    const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      submitBtn.innerHTML = `<span>Sending Message...</span>`;
+    }
 
-    feedback.innerHTML = `<span style="color:#10b981;">✓ Opening your email client to send message to Rajesh...</span>`;
-    form.reset();
+    feedback.innerHTML = `<span style="color:#38bdf8;">Sending your message directly to Rajesh's inbox...</span>`;
 
-    setTimeout(() => {
-      feedback.innerHTML = '';
-    }, 5000);
+    // If viewing locally as file://, use native form submit
+    if (window.location.protocol === 'file:') {
+      feedback.innerHTML = `<span style="color:#38bdf8;">Submitting via form service...</span>`;
+      form.submit();
+      return;
+    }
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/rajeshprabhakar2000@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          _subject: `[Portfolio Inquiry] ${subject || 'New Message from Portfolio'}`,
+          message: msg,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === 'true' || data.success === true)) {
+        feedback.innerHTML = `<span style="color:#10b981; font-weight:600;">✓ Message sent successfully! It has been delivered directly to Rajesh's inbox.</span>`;
+        form.reset();
+      } else {
+        // Fallback to native form submission
+        form.submit();
+      }
+    } catch (err) {
+      console.warn('FormSubmit AJAX failed, falling back to native submit:', err);
+      form.submit();
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+    }
   });
 }
