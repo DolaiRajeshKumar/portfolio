@@ -24,10 +24,10 @@ function initTypewriter() {
 
   const roles = [
     'DevOps Engineer',
-    'Cloud & Automation Specialist',
+    'Multi-Cloud Specialist (AWS • Azure • GCP)',
     'Kubernetes & Docker Practitioner',
     'Infrastructure as Code (IaC) Builder',
-    'SRE & Observability Enthusiast'
+    'SRE & DevSecOps Practitioner'
   ];
 
   let roleIndex = 0;
@@ -278,60 +278,73 @@ function initTerminal() {
 Available Commands:
   <span class="term-highlight">help</span>             Show this help menu
   <span class="term-highlight">whoami</span>           Print bio and professional background
-  <span class="term-highlight">skills</span>           Display tech stack & competencies
+  <span class="term-highlight">skills</span>           Display multi-cloud stack & competencies
   <span class="term-highlight">experience</span>       Display employment history & achievements
   <span class="term-highlight">projects</span>         Summarize featured production projects
   <span class="term-highlight">pipeline --run</span>   Trigger the interactive CI/CD visualizer
-  <span class="term-highlight">cat resume.txt</span>   Dump quick resume highlights
-  <span class="term-highlight">metrics</span>          Display quantifiable DevOps business impact
+  <span class="term-highlight">cat resume.txt</span>   Dump verified resume overview
+  <span class="term-highlight">pillars</span>          Display core engineering capabilities
   <span class="term-highlight">contact</span>          Show email, phone, and LinkedIn
-  <span class="term-highlight">uptime</span>           Simulated cloud cluster status
+  <span class="term-highlight">uptime</span>           Multi-cloud cluster status
   <span class="term-highlight">clear</span>            Clear terminal screen
 `,
     whoami: () => `
 <span class="term-highlight">Dolai Rajesh Kumar</span>
-Role: DevOps Engineer | Cloud & Automation Specialist
+Role: DevOps Engineer | Multi-Cloud & Automation Specialist
 Location: Hyderabad, India
-Experience: Hands-on expertise architecting Jenkins CI/CD, Kubernetes clusters, 
-and AWS cloud infrastructure with Terraform & Ansible. MCA Graduate (2023).
+Multi-Cloud: AWS, Microsoft Azure, Google Cloud Platform (GCP)
+Experience: Hands-on expertise architecting Jenkins & GitHub Actions CI/CD, 
+Kubernetes clusters (EKS/AKS/GKE), and Infrastructure as Code with Terraform & Ansible.
+MCA Graduate (2023).
 `,
     skills: () => `
-<span class="term-highlight">[Cloud & Infrastructure]</span> AWS (EC2, S3, EKS, RDS, VPC, IAM, Route 53, CloudWatch, Lambda)
-<span class="term-highlight">[Containers & K8s]</span>     Docker, Kubernetes (EKS), Helm, Multi-stage Builds, HPA
-<span class="term-highlight">[CI/CD & Automation]</span>   Jenkins Declarative Pipelines, GitHub Actions, Maven, ArgoCD
-<span class="term-highlight">[IaC & Configuration]</span>  Terraform (Modules & State), Ansible (Playbooks & Roles)
-<span class="term-highlight">[Observability & SRE]</span>  Prometheus, Grafana, Alertmanager, AWS CloudWatch, SLIs/SLOs
-<span class="term-highlight">[DevSecOps & Script]</span>  SonarQube Quality Gates, Trivy Scan, Linux/Bash, Python
+<span class="term-highlight">[AWS Cloud]</span>          EC2, S3, EKS, RDS, VPC, IAM, Route 53, CloudWatch, Lambda, Secrets Manager
+<span class="term-highlight">[Microsoft Azure]</span>    Azure VMs, Virtual Network (VNet), AKS, Blob Storage, Azure Monitor, DevOps
+<span class="term-highlight">[Google Cloud]</span>       Compute Engine, GKE, Cloud Storage, VPC Networks, Cloud Operations
+<span class="term-highlight">[Containers & K8s]</span>   Docker, Kubernetes (EKS, AKS, GKE), Helm, Multi-stage Builds, HPA, Ingress
+<span class="term-highlight">[CI/CD & Automation]</span> Jenkins Declarative Pipelines, GitHub Actions, Azure DevOps, Maven, ArgoCD
+<span class="term-highlight">[IaC & Config]</span>       Terraform (Multi-Cloud Providers & State), Ansible (Playbooks & Roles)
+<span class="term-highlight">[Observability & SRE]</span> Prometheus, Grafana, Alertmanager, AWS CloudWatch, Azure Monitor, SLIs/SLOs
+<span class="term-highlight">[DevSecOps & Script]</span> SonarQube Quality Gates, Trivy Scan, Linux (Ubuntu/RHEL), Bash, Python
 `,
     experience: () => `
 <span class="term-highlight">CW Suite India Pvt Ltd — Hyderabad, India</span>
 Associate Software Engineer (DevOps & Cloud) | June 2024 – Present
-• Accelerated release cycles by 70% (4 hours down to 12 minutes) via Jenkins.
-• Maintained 99.9% uptime for 5,000+ DAU on AWS EKS with HPA.
-• Deployed 10-node clusters in &lt;5 mins with reusable Terraform & Ansible modules.
-• Slashed MTTR by 60% with Prometheus & Grafana alerting.
-• Enforced >80% code coverage quality gates via SonarQube & Trivy.
+Domain: Retail ERP/POS SaaS
+• Designed and implemented declarative Jenkins CI/CD pipelines for microservices.
+• Orchestrated containerized workloads using Docker & Kubernetes on AWS with HPA & ingress.
+• Standardized infrastructure provisioning using modular Terraform and Ansible.
+• Established full-stack monitoring using Prometheus & Grafana dashboards with SLIs/SLOs.
+• Integrated SonarQube static code analysis with quality gates into build workflows.
 `,
     projects: () => `
-<span class="term-highlight">1. End-to-End DevSecOps CI/CD Automation Platform</span>
+<span class="term-highlight">1. End-to-End DevSecOps CI/CD Automation Platform (Personal / Simulation)</span>
    Stack: Jenkins, GitHub Actions, Docker, SonarQube, Trivy, AWS EC2/S3, Maven, Slack
-   Highlights: PR webhooks, automated gates, blue/green deploy, instant rollback.
+   Highlights: Webhook-driven pipelines, parallelized build stages, Trivy & SonarQube gates, blue/green rollout.
 
-<span class="term-highlight">2. Cloud Infrastructure Provisioning & Microservices Deployment</span>
-   Stack: AWS VPC, EC2, S3, IAM, CloudWatch, Terraform, Docker, Nginx, Bash
-   Highlights: Modular IaC, multi-stage containers, CloudWatch/SNS alerts, Bash snapshots.
+<span class="term-highlight">2. Cloud Infrastructure Provisioning & Resilient Microservices Deployment (Cloud & IaC)</span>
+   Stack: Multi-Cloud (AWS, Azure, GCP), Terraform, Docker, Nginx, Linux, Bash
+   Highlights: Modular VPC/VNet infrastructure, Spring Boot multi-stage containers, CloudWatch/SNS alerts.
 
-<span class="term-highlight">3. Kubernetes Cluster Observability & GitOps Fleet Management</span>
-   Stack: Kubernetes / EKS, Helm, Prometheus, Grafana, Alertmanager, ArgoCD
-   Highlights: Prometheus Operator, HPA autoscaling, p95/p99 latency tracking.
+<span class="term-highlight">3. Multi-Cloud Kubernetes Fleet & GitOps Management (Cloud-Native K8s)</span>
+   Stack: Kubernetes (EKS/AKS/GKE), Helm, Prometheus, Grafana, Alertmanager, ArgoCD
+   Highlights: Helm operator deployments, HPA dynamic autoscaling, p95/p99 latency tracking.
+`,
+    pillars: () => `
+<span class="term-highlight">Core Engineering Capabilities:</span>
+  • CI/CD & Automation:    Declarative pipelines enabling seamless & predictable releases
+  • Multi-Cloud Infra:     Modular Terraform & Ansible across AWS, Azure, and GCP
+  • Container Platforms:   Kubernetes (EKS/AKS/GKE) with auto-scaling & ingress control
+  • SRE & Observability:   Full-stack Prometheus & Grafana telemetry to accelerate MTTR
+  • DevSecOps Governance:  Integrated SonarQube & Trivy quality gates across pipelines
 `,
     metrics: () => `
-<span class="term-highlight">Key Quantifiable DevOps Metrics:</span>
-  • Release Turnaround:   <span style="color:#10b981;">70% faster (4h -> 12m)</span>
-  • EKS Cluster Uptime:   <span style="color:#10b981;">99.9% availability</span>
-  • IaC Deploy Speed:     <span style="color:#10b981;">&lt; 5 minutes</span>
-  • MTTR Reduction:       <span style="color:#10b981;">60% faster incident resolution</span>
-  • Production Rollouts:  <span style="color:#10b981;">0 failed deployments</span> (Blue/Green)
+<span class="term-highlight">Core Engineering Capabilities:</span>
+  • CI/CD & Automation:    Declarative pipelines enabling seamless & predictable releases
+  • Multi-Cloud Infra:     Modular Terraform & Ansible across AWS, Azure, and GCP
+  • Container Platforms:   Kubernetes (EKS/AKS/GKE) with auto-scaling & ingress control
+  • SRE & Observability:   Full-stack Prometheus & Grafana telemetry to accelerate MTTR
+  • DevSecOps Governance:  Integrated SonarQube & Trivy quality gates across pipelines
 `,
     contact: () => `
 <span class="term-highlight">Get In Touch:</span>
@@ -342,32 +355,38 @@ Associate Software Engineer (DevOps & Cloud) | June 2024 – Present
   • Location: Hyderabad, India
 `,
     uptime: () => `
-12:18:12 up 142 days, 16:40, 1 user, load average: 0.12, 0.08, 0.05
-Cluster Nodes: 10/10 Ready | Pods: 48/48 Running | Cloud: AWS ap-south-1 (Mumbai)
+Multi-Cloud Topology: AWS ap-south-1, Azure Central India, GCP asia-south1
+Cluster Nodes: 12/12 Ready | Pods: Active & Healthy | Status: 100% Operational
 `
   };
 
   commands['cat resume.txt'] = () => `
 =====================================================================
                     DOLAI RAJESH KUMAR
-         DevOps Engineer | Cloud & Automation Specialist
+      DevOps Engineer | Multi-Cloud & Automation Specialist
    Hyderabad, India • rajeshprabhakar2000@gmail.com • +91 7287839925
    LinkedIn: dolairajeshkumar • GitHub: dolairajeshkumar
 =====================================================================
-SUMMARY:
+PROFESSIONAL SUMMARY:
 Results-driven DevOps Engineer with hands-on experience architecting 
 automated CI/CD pipelines, scalable Kubernetes clusters, and resilient 
-AWS cloud infrastructure.
+multi-cloud infrastructure across AWS, Microsoft Azure, and GCP.
 
-EDUCATION:
-MCA - Aurora's PG College, Hyderabad (Graduated 2023)
+TECHNICAL SKILLS:
+• Multi-Cloud: AWS (EKS, VPC, S3), Azure (AKS, VNet, VMs), GCP (GKE, VPC)
+• Containers: Docker, Kubernetes, Helm, Multi-stage Builds, HPA
+• CI/CD: Jenkins Declarative, GitHub Actions, Azure DevOps, ArgoCD
+• IaC: Terraform (Multi-Cloud Providers), Ansible Playbooks & Roles
+• SRE & Observability: Prometheus, Grafana, Alertmanager, CloudWatch
 
 EXPERIENCE:
 Associate Software Engineer (DevOps & Cloud) @ CW Suite India (2024-Present)
-- 70% release turnaround speedup
-- 99.9% uptime on EKS
-- Terraform & Ansible automated provisioning
-- Prometheus & Grafana full-stack monitoring
+Retail ERP/POS SaaS • Hyderabad, India
+- Declarative Jenkins CI/CD pipelines for microservices
+- Docker & Kubernetes container orchestration on AWS with HPA
+- Modular Terraform & Ansible multi-environment provisioning
+- Prometheus & Grafana full-stack monitoring with SLIs/SLOs
+- SonarQube static code analysis & Trivy container scanning
 `;
   commands['resume'] = commands['cat resume.txt'];
 

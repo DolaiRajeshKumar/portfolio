@@ -604,6 +604,25 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: var(--shadow-md), var(--shadow-glow);
 }
 
+.pillar-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.85rem;
+  line-height: 1;
+}
+
+.domain-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.35rem;
+}
+
 .metric-number {
   font-size: 3rem;
   font-weight: 800;
@@ -614,7 +633,7 @@ body.light-theme .moon-icon { display: block; }
 }
 
 .metric-label {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
