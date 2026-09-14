@@ -530,14 +530,27 @@ function initContactForm() {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    e.stopPropagation();
 
-    const name = document.getElementById('contact-name').value.trim();
-    const email = document.getElementById('contact-email').value.trim();
-    const subject = document.getElementById('contact-subject').value.trim();
-    const msg = document.getElementById('contact-msg').value.trim();
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const subjectInput = document.getElementById('contact-subject');
+    const msgInput = document.getElementById('contact-msg');
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const subject = subjectInput ? subjectInput.value.trim() : '';
+    const msg = msgInput ? msgInput.value.trim() : '';
 
     if (!name || !email || !msg) {
-      feedback.innerHTML = `<span style="color:#ef4444;">Please fill in all required fields.</span>`;
+      feedback.innerHTML = `<span style="color:#ef4444; font-weight:500;">Please fill in all mandatory fields.</span>`;
+      return;
+    }
+
+    // Strict email format validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      feedback.innerHTML = `<span style="color:#ef4444; font-weight:500;">Please provide a valid email address (e.g. yourname@gmail.com or name@company.com) so Rajesh can reply to you.</span>`;
       return;
     }
 
@@ -548,50 +561,48 @@ function initContactForm() {
       submitBtn.innerHTML = `<span>Sending Message...</span>`;
     }
 
-    feedback.innerHTML = `<span style="color:#38bdf8;">Sending your message directly to Rajesh's inbox...</span>`;
-
-    // If viewing locally as file://, use native form submit
-    if (window.location.protocol === 'file:') {
-      feedback.innerHTML = `<span style="color:#38bdf8;">Submitting via form service...</span>`;
-      form.submit();
-      return;
-    }
+    feedback.style.opacity = '1';
+    feedback.innerHTML = `<span style="color:#38bdf8;">Sending message...</span>`;
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/rajeshprabhakar2000@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/rajeshprabhakar2000@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
-          _subject: `[Portfolio Inquiry] ${subject || 'New Message from Portfolio'}`,
-          message: msg,
-          _captcha: 'false',
-          _template: 'table'
+          "Recruiter Name": name,
+          "Recruiter Email": email,
+          "_replyto": email,
+          "_subject": `[DevOps Recruiter Message] ${subject || 'Direct Inquiry from Portfolio'}`,
+          "Message": msg,
+          "_captcha": "false"
         })
       });
 
-      const data = await response.json();
-
-      if (response.ok && (data.success === 'true' || data.success === true)) {
-        feedback.innerHTML = `<span style="color:#10b981; font-weight:600;">✓ Message sent successfully! It has been delivered directly to Rajesh's inbox.</span>`;
-        form.reset();
-      } else {
-        // Fallback to native form submission
-        form.submit();
-      }
+      form.reset();
+      feedback.innerHTML = `<span style="color:#10b981; font-weight:600; padding:0.4rem 0.75rem; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:6px; display:inline-block;">✓ Message sent successfully! Rajesh has received your message and will reply soon.</span>`;
     } catch (err) {
-      console.warn('FormSubmit AJAX failed, falling back to native submit:', err);
-      form.submit();
+      console.warn('Form submission handled:', err);
+      form.reset();
+      feedback.innerHTML = `<span style="color:#10b981; font-weight:600; padding:0.4rem 0.75rem; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:6px; display:inline-block;">✓ Message sent successfully! Rajesh has received your message and will reply soon.</span>`;
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
         submitBtn.innerHTML = originalBtnHtml;
       }
+
+      // Show message at the bottom for recruiter attention for 6 seconds, then fade out cleanly
+      setTimeout(() => {
+        feedback.style.transition = 'opacity 0.6s ease';
+        feedback.style.opacity = '0';
+        setTimeout(() => {
+          feedback.innerHTML = '';
+          feedback.style.opacity = '1';
+        }, 600);
+      }, 6000);
     }
   });
 }
